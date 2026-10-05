@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VANTA | Premium streetwear</title>
+  <meta name="description" content="VANTA is premium streetwear for people who don't need to be loud to be noticed. Heavyweight essentials, oversized fits and outerwear, designed to last.">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Open Graph / Twitter (updated per page by js/main.js) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VANTA">
+  <meta property="og:title" content="VANTA | Premium streetwear">
+  <meta property="og:description" content="Heavyweight essentials, oversized fits and outerwear for people who don't need to be loud to be noticed.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath d='M6 8h4l6 14 6-14h4L18 26h-4z' fill='%23fff'/%3E%3C/svg%3E">
+
+  <!-- Fonts: Archivo (variable width axis, used expanded for display type) + Hanken Grotesk for text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <!-- Tailwind (CDN build, for utilities). For production, compile with the Tailwind CLI instead. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#000', char: '#141414', line: '#262626', mute: '#919191', bone: '#ecebe7' },
+          fontFamily: { display: ['Archivo', 'sans-serif'], sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"VANTA","description":"Premium streetwear","address":{"@type":"PostalAddress","streetAddress":"214 Mercer Street","addressLocality":"New York","addressRegion":"NY","postalCode":"10012","addressCountry":"US"}}
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link" data-skip>Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header id="site-header">
+    <p class="announce">Free shipping on orders over $150</p>
+    <nav class="nav wrap" aria-label="Primary">
+      <div class="nav-left">
+        <button class="icon-btn menu-btn" data-action="open-menu" aria-label="Open menu" data-icon="menu"></button>
+        <ul class="nav-links">
+          <li><a href="#/shop?new=1" data-nav="new">New</a></li>
+          <li><a href="#/shop?gender=men" data-nav="men">Men</a></li>
+          <li><a href="#/shop?gender=women" data-nav="women">Women</a></li>
+          <li><a href="#/collections" data-nav="collections">Collections</a></li>
+          <li><a href="#/about" data-nav="about">About</a></li>
+        </ul>
+      </div>
+      <a href="#/" class="logo" aria-label="VANTA home">VANTA</a>
+      <div class="nav-right">
+        <button class="icon-btn desk-only" data-action="open-search" aria-label="Search products" data-icon="search"></button>
+        <button class="icon-btn desk-only" data-action="open-account" aria-label="Account and saved items" data-icon="user"></button>
+        <button class="icon-btn bag-btn" data-action="open-cart" aria-label="Open bag, empty">
+          <span data-icon="bag"></span>
+          <span class="bag-count" data-cart-count hidden aria-hidden="true">0</span>
+        </button>
+      </div>
+    </nav>
+    <div id="progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">VANTA</p>
+        <p class="footer-blurb">Elevated everyday pieces for people who don't need to be loud to be noticed.</p>
+        <form data-form="newsletter" class="nl-form" novalidate aria-label="Newsletter signup (footer)">
+          <div class="field">
+            <label for="nl-footer">Newsletter</label>
+            <div class="inline-submit">
+              <input id="nl-footer" name="email" type="email" required autocomplete="email" placeholder="Email address" data-label="Email" aria-describedby="nl-footer-err">
+              <button class="icon-btn" type="submit" aria-label="Subscribe to newsletter" data-icon="arrow"></button>
+            </div>
+            <p class="field-error" id="nl-footer-err"></p>
+          </div>
+        </form>
+      </div>
+      <nav aria-label="Shop">
+        <h2 class="footer-h">Shop</h2>
+        <ul>
+          <li><a href="#/shop?new=1">New arrivals</a></li>
+          <li><a href="#/shop?gender=men">Men</a></li>
+          <li><a href="#/shop?gender=women">Women</a></li>
+          <li><a href="#/shop?cat=accessories">Accessories</a></li>
+          <li><a href="#/collections">Collections</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h2 class="footer-h">Company</h2>
+        <ul>
+          <li><a href="#/about">Our story</a></li>
+          <li><a href="#/about?section=sustainability">Sustainability</a></li>
+          <li><a href="#/contact">Contact</a></li>
+          <li><a href="#/contact?section=store">Store</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Support">
+        <h2 class="footer-h">Support</h2>
+        <ul>
+          <li><a href="#/contact?section=faq">FAQ</a></li>
+          <li><a href="#/info/shipping-returns">Shipping &amp; Returns</a></li>
+          <li><a href="#/info/privacy">Privacy</a></li>
+          <li><a href="#/info/terms">Terms</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Social">
+        <h2 class="footer-h">Social</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+          <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap footer-base">
+      <p>&copy; 2026 VANTA. All rights reserved.</p>
+      <p><a href="#/info/privacy">Privacy</a> &nbsp; <a href="#/info/terms">Terms</a> &nbsp; <a href="#/info/shipping-returns">Shipping &amp; Returns</a></p>
+    </div>
+    <p class="footer-mark" aria-hidden="true">VANTA</p>
+  </footer>
+
+  <!-- Toasts -->
+  <div id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- ============ DIALOGS ============ -->
+
+  <!-- Mobile menu -->
+  <dialog id="menu-dialog" class="sheet sheet-left" aria-label="Menu">
+    <div class="sheet-panel">
+      <div class="sheet-head">
+        <span class="logo" style="font-size:1.1rem">VANTA</span>
+        <button class="icon-btn" data-action="close" aria-label="Close menu" data-icon="x"></button>
+      </div>
+      <nav class="menu-links" aria-label="Mobile">
+        <a href="#/shop?new=1">New</a>
+        <a href="#/shop?gender=men">Men</a>
+        <a href="#/shop?gender=women">Women</a>
+        <a href="#/collections">Collections</a>
+        <a href="#/about">About</a>
+        <a href="#/contact">Contact</a>
+      </nav>
+      <div class="menu-foot">
+        <button class="menu-action" data-action="open-search"><span data-icon="search"></span> Search</button>
+        <button class="menu-action" data-action="open-account"><span data-icon="user"></span> Account</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Search -->
+  <dialog id="search-dialog" class="sheet sheet-top" aria-label="Search">
+    <div class="sheet-panel">
+      <form data-form="search" role="search" class="search-form">
+        <span data-icon="search"></span>
+        <label for="search-input" class="sr-only">Search products</label>
+        <input id="search-input" type="search" name="q" placeholder="Search tees, hoodies, cargo&hellip;" autocomplete="off" enterkeyhint="search">
+        <button type="button" class="icon-btn" data-action="close" aria-label="Close search" data-icon="x"></button>
+      </form>
+      <div id="search-results" class="search-results" aria-live="polite"></div>
+    </div>
+  </dialog>
+
+  <!-- Cart drawer -->
+  <dialog id="cart-dialog" class="sheet sheet-right" aria-labelledby="drawer-title">
+    <div class="sheet-panel drawer">
+      <div class="sheet-head">
+        <h2 id="drawer-title" class="sheet-title">Bag</h2>
+        <button class="icon-btn" data-action="close" aria-label="Close bag" data-icon="x"></button>
+      </div>
+      <div id="drawer-body" class="drawer-body"></div>
+      <div id="drawer-foot" class="drawer-foot"></div>
+    </div>
+  </dialog>
+
+  <!-- Account -->
+  <dialog id="account-dialog" class="sheet sheet-center" aria-labelledby="account-title">
+    <div class="sheet-panel modal">
+      <div class="sheet-head">
+        <h2 id="account-title" class="sheet-title">Account</h2>
+        <button class="icon-btn" data-action="close" aria-label="Close account" data-icon="x"></button>
+      </div>
+      <div id="account-body"></div>
+    </div>
+  </dialog>
+
+  <!-- Checkout -->
+  <dialog id="checkout-dialog" class="sheet sheet-center" aria-labelledby="checkout-title">
+    <div class="sheet-panel modal modal-wide">
+      <div class="sheet-head">
+        <h2 id="checkout-title" class="sheet-title">Checkout</h2>
+        <button class="icon-btn" data-action="close" aria-label="Close checkout" data-icon="x"></button>
+      </div>
+      <div id="checkout-body"></div>
+    </div>
+  </dialog>
+
+  <!-- Size guide -->
+  <dialog id="size-dialog" class="sheet sheet-center" aria-labelledby="size-title">
+    <div class="sheet-panel modal">
+      <div class="sheet-head">
+        <h2 id="size-title" class="sheet-title">Size guide</h2>
+        <button class="icon-btn" data-action="close" aria-label="Close size guide" data-icon="x"></button>
+      </div>
+      <div id="size-body"></div>
+    </div>
+  </dialog>
+
+  <noscript><p style="padding:6rem 1.5rem;text-align:center">VANTA needs JavaScript to browse the collection. Please enable it and reload.</p></noscript>
+
+  <!-- Scripts (classic scripts, shared scope, order matters) -->
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
